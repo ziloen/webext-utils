@@ -1,0 +1,16 @@
+{
+  "name": "@ziloen/webext-utils",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "webextension-polyfill": "^0.10.0"
+  },
+  "peerDependencies": {
+    "webextension-polyfill": "^0.10.0"
+  }
+}
