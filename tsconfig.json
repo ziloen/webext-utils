@@ -4,6 +4,12 @@
     "strict": true,
     "strictBindCallApply": true,
     "strictFunctionTypes": true,
+    "exactOptionalPropertyTypes": true,
     "stripInternal": true,
-  }
+    "module": "ESNext",
+    "moduleResolution": "Bundler"
+  },
+  "exclude": [
+    "dist"
+  ]
 }

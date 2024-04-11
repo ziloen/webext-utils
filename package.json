@@ -1,14 +1,20 @@
 {
   "name": "@ziloen/webext-utils",
   "version": "0.0.1",
-  "description": "",
+  "description": "Web Extension utilities for manifest v3",
   "main": "dist/index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup"
   },
   "license": "MIT",
   "dependencies": {
     "webextension-polyfill": "^0.10.0"
+  },
+  "devDependencies": {
+    "@types/webextension-polyfill": "^0.10.7",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
   },
   "peerDependencies": {
     "webextension-polyfill": "^0.10.0"
