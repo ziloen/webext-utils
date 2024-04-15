@@ -1,6 +1,6 @@
 {
   "name": "@ziloen/webext-utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Web Extension utilities for manifest v3",
   "license": "MIT",
   "main": "dist/index.js",
