@@ -30,6 +30,10 @@ async function isSidebarPage() {
   return false
 }
 
+function isSidebarPageSync() {
+  
+}
+
 
 function isPopupPage() {
 

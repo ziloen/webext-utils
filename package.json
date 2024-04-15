@@ -2,17 +2,24 @@
   "name": "@ziloen/webext-utils",
   "version": "0.0.1",
   "description": "Web Extension utilities for manifest v3",
+  "license": "MIT",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "type": "module",
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "prepack": "npm run build",
+    "release": "bumpp --commit --no-push && npm publish"
   },
-  "license": "MIT",
   "dependencies": {
     "webextension-polyfill": "^0.10.0"
   },
   "devDependencies": {
     "@types/webextension-polyfill": "^0.10.7",
+    "bumpp": "^9.4.0",
     "tsup": "^8.0.2",
     "typescript": "^5.4.5"
   },

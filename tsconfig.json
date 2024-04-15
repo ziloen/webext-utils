@@ -1,13 +1,15 @@
 {
   "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "Bundler",
     "allowJs": false,
     "strict": true,
     "strictBindCallApply": true,
     "strictFunctionTypes": true,
     "exactOptionalPropertyTypes": true,
     "stripInternal": true,
-    "module": "ESNext",
-    "moduleResolution": "Bundler"
+    "removeComments": false,
   },
   "exclude": [
     "dist"
