@@ -19,12 +19,17 @@ import type { Events } from "webextension-polyfill"
 export function listenEvent<Callback extends (...args: any[]) => any>(
   target: Events.Event<Callback>,
   callback: NoInfer<Callback>,
-  options?: { signal?: AbortSignal }
+  options: { signal?: AbortSignal } = {}
 ): () => void {
+  const signal = options.signal
+
+  if (signal?.aborted) {
+    return () => { }
+  }
+
   target.addListener(callback)
 
   const removeListener = () => target.removeListener(callback)
-  const signal = options?.signal
 
   if (signal) {
     signal.addEventListener('abort', removeListener, { once: true })
