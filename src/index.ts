@@ -33,12 +33,11 @@ export function listenEvent<Callback extends (...args: any[]) => any>(
 
   if (signal) {
     signal.addEventListener('abort', removeListener, { once: true })
-  }
-
-  return () => {
-    removeListener()
-    if (signal) {
+    return () => {
+      removeListener()
       signal.removeEventListener('abort', removeListener)
     }
   }
+
+  return removeListener
 }

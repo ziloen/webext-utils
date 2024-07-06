@@ -31,10 +31,14 @@ async function isSidebarPage() {
 }
 
 function isSidebarPageSync() {
-  
+
 }
 
 
 function isPopupPage() {
 
+}
+
+export function isContentScriptPage() {
+  return !!Browser.runtime.id && typeof Browser.tabs?.sendMessage !== "function"
 }
